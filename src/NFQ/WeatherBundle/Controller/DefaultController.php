@@ -13,7 +13,7 @@ class DefaultController extends Controller
     public function indexAction($city)
     {
 
-        $json = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=" . $city . "&units=metric&appid=16eb031b01a789e52e9ad1ec4c292233");
+        $json = file_get_contents("http://api.openweathermap.org/data/2.5/weather?q=" . $city . "&units=metric&appid=");
         $decoded = json_decode($json, true);
         $temp = $decoded["main"]["temp"];
         $name = $decoded["name"];
